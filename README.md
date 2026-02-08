@@ -1,4 +1,4 @@
-# SUVIDHA 2026
+# **Saarthi**
 
 ## Smart Urban Virtual Interactive Digital Helpdesk Assistant
 
@@ -8,11 +8,11 @@
 
 ## Executive Summary
 
-SUVIDHA 2026 is a comprehensive digital infrastructure solution designed to transform how citizens interact with essential utility services. The platform consolidates electricity, gas, water, and municipal services into a single, accessible interface, addressing the fragmentation that typically plagues public service delivery systems.
+**Saarthi** is a comprehensive digital infrastructure solution designed to transform how citizens interact with essential utility services. The platform consolidates electricity, gas, water, and municipal services into a single, accessible interface, addressing the fragmentation that typically plagues public service delivery systems.
 
-Built with a focus on inclusivity, security, and resilience, SUVIDHA enables citizens across all demographics—including senior citizens, differently-abled individuals, and those with limited digital literacy—to independently manage their utility needs. The system maintains full functionality even during network disruptions, ensuring uninterrupted service delivery in areas with unreliable connectivity.
+Built with a focus on inclusivity, security, and resilience, **Saarthi** enables citizens across all demographics—including senior citizens, differently-abled individuals, and those with limited digital literacy—to independently manage their utility needs. The system maintains full functionality even during network disruptions, ensuring uninterrupted service delivery in areas with unreliable connectivity.
 
-This document provides a complete technical overview of the architecture, implementation decisions, and operational characteristics of the SUVIDHA platform.
+This document provides a complete technical overview of the architecture, implementation decisions, and operational characteristics of the **Saarthi** platform.
 
 ---
 
@@ -42,7 +42,7 @@ Citizens seeking utility services currently face a fragmented ecosystem requirin
 
 **Transparency Deficits**: Citizens lack visibility into complaint resolution timelines, application statuses, and service level commitments, eroding trust in public service delivery.
 
-SUVIDHA addresses each of these challenges through thoughtful architectural decisions and implementation patterns detailed in the following sections.
+**Saarthi** addresses each of these challenges through thoughtful architectural decisions and implementation patterns detailed in the following sections.
 
 ---
 
@@ -54,47 +54,47 @@ The platform follows a layered architecture pattern that separates concerns acro
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                              PRESENTATION LAYER                              │
+│                              PRESENTATION LAYER                             │
 │  ┌─────────────────────────────────────────────────────────────────────────┐│
-│  │                         React Single Page Application                    ││
-│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ││
-│  │  │   Home   │  │  Bills   │  │Grievance │  │Connection│  │  Track   │  ││
-│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └──────────┘  ││
+│  │                         React Single Page Application                   ││
+│  │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   ││
+│  │  │   Home   │  │  Bills   │  │Grievance │  │Connection│  │  Track   │   ││
+│  │  └──────────┘  └──────────┘  └──────────┘  └──────────┘  └──────────┘   ││
 │  │  ┌────────────────────────────────────────────────────────────────────┐ ││
-│  │  │  Context Providers: Auth | Session | Accessibility | Offline      │ ││
+│  │  │  Context Providers: Auth | Session | Accessibility | Offline       │ ││
 │  │  └────────────────────────────────────────────────────────────────────┘ ││
 │  └─────────────────────────────────────────────────────────────────────────┘│
-│                                      │                                       │
-│                              REST API (HTTPS)                                │
-│                                      ▼                                       │
+│                                      │                                      │
+│                              REST API (HTTPS)                               │
+│                                      ▼                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                              API GATEWAY LAYER                               │
+│                              API GATEWAY LAYER                              │
 │  ┌─────────────────────────────────────────────────────────────────────────┐│
-│  │                           FastAPI Application                            ││
-│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────┐        ││
-│  │  │Rate Limiter│──│Auth Verify │──│Request Log │──│Exception   │        ││
-│  │  │ Middleware │  │ Middleware │  │ Middleware │  │Handler     │        ││
-│  │  └────────────┘  └────────────┘  └────────────┘  └────────────┘        ││
+│  │                           FastAPI Application                           ││
+│  │  ┌────────────┐  ┌────────────┐  ┌────────────┐  ┌────────────┐         ││
+│  │  │Rate Limiter│──│Auth Verify │──│Request Log │──│Exception   │         ││
+│  │  │ Middleware │  │ Middleware │  │ Middleware │  │Handler     │         ││
+│  │  └────────────┘  └────────────┘  └────────────┘  └────────────┘         ││
 │  └─────────────────────────────────────────────────────────────────────────┘│
-│                                      │                                       │
+│                                      │                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                             BUSINESS LOGIC LAYER                             │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐  │
-│  │  Auth   │ │ Billing │ │Grievance│ │Connectn │ │Document │ │Analytics│  │
-│  │ Router  │ │ Router  │ │ Router  │ │ Router  │ │ Router  │ │ Router  │  │
-│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘  │
-│                                      │                                       │
+│                             BUSINESS LOGIC LAYER                            │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐    │
+│  │  Auth   │ │ Billing │ │Grievance│ │Connectn │ │Document │ │Analytics│    │
+│  │ Router  │ │ Router  │ │ Router  │ │ Router  │ │ Router  │ │ Router  │    │
+│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘    │
+│                                      │                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                             DATA PERSISTENCE LAYER                           │
-│  ┌─────────────────────────────────┐  ┌─────────────────────────────────┐  │
-│  │           PostgreSQL            │  │             Redis               │  │
-│  │  ┌───────────┐  ┌───────────┐  │  │  ┌───────────┐  ┌───────────┐  │  │
-│  │  │   Users   │  │   Bills   │  │  │  │  Sessions │  │Rate Limits│  │  │
-│  │  │  Payments │  │ Grievances│  │  │  │  OTP Cache│  │  Tokens   │  │  │
-│  │  │Connections│  │ Documents │  │  │  └───────────┘  └───────────┘  │  │
-│  │  │Audit Logs │  │Notificatns│  │  │                                 │  │
-│  │  └───────────┘  └───────────┘  │  └─────────────────────────────────┘  │
-│  └─────────────────────────────────┘                                       │
+│                             DATA PERSISTENCE LAYER                          │
+│  ┌─────────────────────────────────┐  ┌─────────────────────────────────┐   │
+│  │           PostgreSQL            │  │             Redis               │   │
+│  │  ┌───────────┐  ┌───────────┐   │  │  ┌───────────┐  ┌───────────┐   │   │
+│  │  │   Users   │  │   Bills   │   │  │  │  Sessions │  │Rate Limits│   │   │
+│  │  │  Payments │  │ Grievances│   │  │  │  OTP Cache│  │  Tokens   │   │   │
+│  │  │Connections│  │ Documents │   │  │  └───────────┘  └───────────┘   │   │
+│  │  │Audit Logs │  │Notificatns│   │  │                                 │   │
+│  │  └───────────┘  └───────────┘   │  └─────────────────────────────────┘   │
+│  └─────────────────────────────────┘                                        │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -143,7 +143,7 @@ The database schema maintains referential integrity across all entities while su
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
 │      User       │       │      Bill       │       │    Payment      │
 ├─────────────────┤       ├─────────────────┤       ├─────────────────┤
-│ id              │◀──┐   │ id              │◀──┐   │ id              │
+│ id              │◀──┐   │ id              │◀──┐  │ id             │
 │ mobile_encrypted│   │   │ user_id ────────┼───┤   │ bill_id ────────┼───┐
 │ mobile_hash     │   │   │ utility_type    │   │   │ amount          │   │
 │ full_name       │   │   │ bill_number     │   │   │ payment_method  │   │
@@ -279,30 +279,30 @@ Security implementation follows defense-in-depth principles with multiple contro
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                            DATA PROTECTION LAYERS                            │
+│                            DATA PROTECTION LAYERS                           │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│   TRANSPORT LAYER                                                            │
+│                                                                             │
+│   TRANSPORT LAYER                                                           │
 │   ┌────────────────────────────────────────────────────────────────────┐    │
-│   │  TLS 1.3 with HSTS enforcement                                      │    │
-│   │  All API traffic encrypted in transit                               │    │
+│   │  TLS 1.3 with HSTS enforcement                                     │    │
+│   │  All API traffic encrypted in transit                              │    │
 │   └────────────────────────────────────────────────────────────────────┘    │
-│                                                                              │
-│   APPLICATION LAYER                                                          │
+│                                                                             │
+│   APPLICATION LAYER                                                         │
 │   ┌────────────────────────────────────────────────────────────────────┐    │
-│   │  Personally Identifiable Information (PII)                          │    │
+│   │  Personally Identifiable Information (PII)                         │    │
 │   │  ├── Mobile Numbers: AES-128-CBC encrypted + SHA-256 hash          │    │
 │   │  ├── Aadhaar Numbers: AES-128-CBC encrypted (never stored plain)   │    │
-│   │  ├── Addresses: AES-128-CBC encrypted                               │    │
-│   │  └── Email Addresses: AES-128-CBC encrypted                         │    │
+│   │  ├── Addresses: AES-128-CBC encrypted                              │    │
+│   │  └── Email Addresses: AES-128-CBC encrypted                        │    │
 │   └────────────────────────────────────────────────────────────────────┘    │
-│                                                                              │
-│   DATABASE LAYER                                                             │
+│                                                                             │
+│   DATABASE LAYER                                                            │
 │   ┌────────────────────────────────────────────────────────────────────┐    │
-│   │  PostgreSQL with encrypted tablespaces                              │    │
-│   │  Connection over SSL with certificate verification                  │    │
+│   │  PostgreSQL with encrypted tablespaces                             │    │
+│   │  Connection over SSL with certificate verification                 │    │
 │   └────────────────────────────────────────────────────────────────────┘    │
-│                                                                              │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -314,23 +314,23 @@ Security implementation follows defense-in-depth principles with multiple contro
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           TOKEN LIFECYCLE                                    │
+│                           TOKEN LIFECYCLE                                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│   Access Token                         Refresh Token                         │
+│                                                                             │
+│   Access Token                         Refresh Token                        │
 │   ┌─────────────────────────┐         ┌─────────────────────────┐           │
 │   │ Lifetime: 15 minutes    │         │ Lifetime: 7 days        │           │
 │   │ Contains: user_id, role │         │ Contains: user_id       │           │
 │   │ Usage: API requests     │         │ Usage: Token renewal    │           │
 │   │ Storage: Memory         │         │ Storage: HttpOnly cookie│           │
 │   └─────────────────────────┘         └─────────────────────────┘           │
-│                                                                              │
-│   Refresh Flow:                                                              │
-│   ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐              │
-│   │ Access  │────▶│ Expired │────▶│ Refresh │────▶│ New     │              │
-│   │ Token   │     │ (401)   │     │ Request │     │ Tokens  │              │
-│   └─────────┘     └─────────┘     └─────────┘     └─────────┘              │
-│                                                                              │
+│                                                                             │
+│   Refresh Flow:                                                             │
+│   ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐               │
+│   │ Access  │────▶│ Expired │────▶│ Refresh │────▶│ New    │              │
+│   │ Token   │     │ (401)   │     │ Request │     │ Tokens  │               │
+│   └─────────┘     └─────────┘     └─────────┘     └─────────┘               │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -340,25 +340,25 @@ Security implementation follows defense-in-depth principles with multiple contro
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         AUDIT LOG HASH CHAIN                                 │
+│                         AUDIT LOG HASH CHAIN                                │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│   Entry 1              Entry 2              Entry 3              Entry N     │
-│   ┌───────────┐       ┌───────────┐       ┌───────────┐       ┌───────────┐│
-│   │action     │       │action     │       │action     │       │action     ││
-│   │timestamp  │       │timestamp  │       │timestamp  │       │timestamp  ││
-│   │user_id    │       │user_id    │       │user_id    │       │user_id    ││
-│   │prev_hash ─┼──────▶│prev_hash ─┼──────▶│prev_hash ─┼──...──│prev_hash  ││
-│   │   NULL    │       │  HASH-1   │       │  HASH-2   │       │ HASH-N-1  ││
-│   │curr_hash ─┼───┐   │curr_hash ─┼───┐   │curr_hash ─┼───┐   │curr_hash  ││
-│   │  HASH-1   │   │   │  HASH-2   │   │   │  HASH-3   │   │   │  HASH-N   ││
-│   └───────────┘   │   └───────────┘   │   └───────────┘   │   └───────────┘│
+│                                                                             │
+│   Entry 1              Entry 2              Entry 3              Entry N    │
+│   ┌───────────┐       ┌───────────┐       ┌───────────┐       ┌───────────┐ │
+│   │action     │       │action     │       │action     │       │action     │ │
+│   │timestamp  │       │timestamp  │       │timestamp  │       │timestamp  │ │
+│   │user_id    │       │user_id    │       │user_id    │       │user_id    │ │
+│   │prev_hash ─┼──────▶│prev_hash ─┼──────▶│prev_hash ─┼──...──│prev_hash │ │
+│   │   NULL    │       │  HASH-1   │       │  HASH-2   │       │ HASH-N-1  │ │
+│   │curr_hash ─┼───┐   │curr_hash ─┼───┐   │curr_hash ─┼───┐   │curr_hash  │ │
+│   │  HASH-1   │   │   │  HASH-2   │   │   │  HASH-3   │   │   │  HASH-N   │ │
+│   └───────────┘   │   └───────────┘   │   └───────────┘   │   └───────────┘ │
 │                   │                   │                   │                 │
 │                   └───────────────────┴───────────────────┘                 │
-│                                                                              │
+│                                                                             │
 │   Verification: SHA-256(entry_n) must equal prev_hash of entry_n+1          │
 │   Any modification breaks the chain, making tampering detectable            │
-│                                                                              │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -379,7 +379,7 @@ Rate limiting prevents abuse through a sliding window algorithm implemented with
 
 ## Accessibility Design
 
-SUVIDHA implements WCAG 2.1 Level AA compliance with additional accommodations for the specific demographics using public kiosks.
+**Saarthi** implements WCAG 2.1 Level AA compliance with additional accommodations for the specific demographics using public kiosks.
 
 ### Visual Accessibility
 
@@ -407,31 +407,31 @@ SUVIDHA implements WCAG 2.1 Level AA compliance with additional accommodations f
 
 ## Offline Resilience
 
-Network reliability cannot be assumed in all deployment contexts. SUVIDHA maintains functionality during connectivity disruptions through a queued transaction architecture.
+Network reliability cannot be assumed in all deployment contexts. **Saarthi** maintains functionality during connectivity disruptions through a queued transaction architecture.
 
 ### Offline Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           OFFLINE OPERATION FLOW                             │
+│                           OFFLINE OPERATION FLOW                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                              │
-│   ONLINE STATE                                                               │
+│                                                                             │
+│   ONLINE STATE                                                              │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  User Action ──▶ API Request ──▶ Server Response ──▶ UI Update      │   │
+│   │  User Action ──▶ API Request ──▶ Server Response ──▶ UI Update    │   │
 │   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                              │
-│   OFFLINE STATE                                                              │
+│                                                                             │
+│   OFFLINE STATE                                                             │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  User Action ──▶ IndexedDB Queue ──▶ Pending UI ──▶ Local Receipt   │   │
+│   │  User Action ──▶ IndexedDB Queue ──▶ Pending UI ──▶ Local Receipt │   │
 │   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                              │
-│   RECONNECTION                                                               │
+│                                                                             │
+│   RECONNECTION                                                              │
 │   ┌─────────────────────────────────────────────────────────────────────┐   │
-│   │  Online Event ──▶ Queue Drain ──▶ Server Sync ──▶ Status Update     │   │
+│   │  Online Event ──▶ Queue Drain ──▶ Server Sync ──▶ Status Update   │   │
 │   └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                              │
-│   IndexedDB Structure:                                                       │
+│                                                                             │
+│   IndexedDB Structure:                                                      │
 │   ┌──────────────────────┐  ┌──────────────────────┐                        │
 │   │ pending_transactions │  │    cached_bills      │                        │
 │   ├──────────────────────┤  ├──────────────────────┤                        │
@@ -440,8 +440,8 @@ Network reliability cannot be assumed in all deployment contexts. SUVIDHA mainta
 │   │ created_at           │  │ cached_at            │                        │
 │   │ sync_status          │  │ user_id              │                        │
 │   │ retry_count          │  └──────────────────────┘                        │
-│   └──────────────────────┘                                                   │
-│                                                                              │
+│   └──────────────────────┘                                                  │
+│                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -524,8 +524,8 @@ The deployment environment requires Docker Engine 20.10 or later and Docker Comp
 
 ```bash
 # Clone the repository
-git clone https://github.com/cdac/suvidha-2026.git
-cd suvidha-2026
+git clone https://github.com/cdac/**Saarthi**-2026.git
+cd **Saarthi**-2026
 
 # Configure environment
 cp backend/.env.example backend/.env
@@ -608,7 +608,7 @@ Load testing performed with k6 against containerized deployment on 4-core, 8GB R
 ## Project Structure
 
 ```
-suvidha/
+**Saarthi**/
 ├── backend/
 │   ├── app/
 │   │   ├── models/              # SQLAlchemy ORM models
@@ -687,12 +687,6 @@ suvidha/
 
 ## Conclusion
 
-SUVIDHA represents a practical approach to digitizing public utility services with genuine consideration for the constraints and requirements of real-world deployment. The architecture prioritizes security without sacrificing usability, accessibility without compromising functionality, and resilience without adding operational complexity.
+**Saarthi** represents a practical approach to digitizing public utility services with genuine consideration for the constraints and requirements of real-world deployment. The architecture prioritizes security without sacrificing usability, accessibility without compromising functionality, and resilience without adding operational complexity.
 
 The implementation demonstrates that inclusive design and robust engineering are complementary rather than competing objectives. By addressing the needs of the most challenged users—those with accessibility requirements, limited connectivity, or minimal digital experience—the platform becomes more usable for everyone.
-
----
-
-**Repository**: Private Development Repository
-
-**Hackathon**: SUVIDHA 2026 - C-DAC Smart City Initiative
