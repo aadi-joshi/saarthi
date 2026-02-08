@@ -1,0 +1,78 @@
+# SUVIDHA 2026 - Docker Compose
+# Smart Urban Virtual Interactive Digital Helpdesk Assistant
+
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: suvidha-db
+    environment:
+      POSTGRES_USER: suvidha
+      POSTGRES_PASSWORD: suvidha
+      POSTGRES_DB: suvidha
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U suvidha"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: suvidha-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build: ./backend
+    container_name: suvidha-backend
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://suvidha:suvidha@postgres:5432/suvidha
+      - REDIS_URL=redis://redis:6379/0
+      - DEBUG=true
+      - SECRET_KEY=change-this-in-production-minimum-32-chars
+      - AES_KEY=change-this-32-byte-key-prod123
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - uploads_data:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Frontend Kiosk
+  frontend:
+    build: ./frontend
+    container_name: suvidha-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  uploads_data:
+
+networks:
+  default:
+    name: suvidha-network

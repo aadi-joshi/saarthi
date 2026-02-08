@@ -1,0 +1,258 @@
+https://industrysupport.cdacb.in/hackthon/suvidha-2026
+
+Industry Support Centre
+A MeitY & C-DAC Initiative for Industrial Excellence
+CDAC Logo
+SUVIDHA 2026 Hackathon
+Smart Urban Virtual Interactive Digital Helpdesk Assistant
+Organized by C-DAC under MeitY | Smart City 2.0 Initiative
+
+About the Challenge
+The Centre for Development of Advanced Computing (C-DAC), under the Ministry of Electronics and Information Technology (MeitY), Government of India, is the nation’s premier R&D organization in IT, electronics, and allied areas. As part of the“Smart City 2.0: Empowering Indian Industries with Smart Solutions” initiative led by C-DAC centres at Bengaluru, Hyderabad, CINE, and Delhi in collaboration with IIT-Bhubaneswar. C-DAC is driving the development of indigenous, scalable solutions to enhance urban utility services and support India’s Smart Cities Mission. Under this initiative, C-DAC announces “Smart Urban Virtual Interactive Digital Helpdesk Assistant (SUVIDHA) 2026”, a national-level hackathon inviting students to design next-generation, multilingual, and user-friendly digital kiosk interfaces for public utility services such as electricity, water, gas, sanitation, and municipal services. The challenge aims to modernize civic service delivery by improving efficiency, transparency, and citizen experience through innovative, real-time interactive solutions.
+
+Problem Statement
+Participants are required to design and develop a Smart Urban Digital Helpdesk Assistant (SUVIDHA) — a public-facing, touch-based kiosk interface for customer interaction in civic utility offices. The solution should address real-world challenges of modern urban governance by improving accessibility, transparency, and efficiency in citizen–government interactions.
+
+The objective is to build a single, integrated, self-service digital kiosk capable of delivering essential public utility services across multiple departments, including:
+
+Electricity Utility Offices
+Gas Distribution Offices
+Municipal Corporations (Water Supply, Waste Management)
+The proposed kiosk solution must support a multilingual user interface, secure citizen authentication, service request and complaint submission, document upload functionality, real-time application status tracking, and automated receipt generation. The system should be scalable, reliable, and designed for intuitive use by citizens of diverse backgrounds.
+
+Who Can Participate
+SUVIDHA 2026 is open to enthusiastic and innovative teams interested in building smart city solutions.
+
+Students from recognized academic institutions.
+Teams with interest in Smart City and e-Governance solutions.
+Participants with skills in UI/UX, software development, or system design.
+Multidisciplinary teams are encouraged.
+* Mentor is not mandatory for participation.
+
+Smart Urban Virtual Interactive Digital Helpdesk
+Assistant (SUVIDHA) - 2026
+C-DAC SUVIDHA Challenge
+Contents
+1. Hackathon Title .............................................................................................. 2
+2. Introduction.................................................................................................... 2
+3. Problem Statement:....................................................................................... 2
+3.1 Background:............................................................................................... 3
+3.2 Scope .......................................................................................................... 3
+3.3 Objectives................................................................................................... 3
+3.4 Key Features .............................................................................................. 3
+3.5 Technical Requirements............................................................................ 4
+3.6 Expected Deliverables............................................................................... 4
+3.7 Use Case Examples ................................................................................... 4
+4. Judging Criteria............................................................................................. 5
+5. Guidelines for Submission ........................................................................... 5
+6. Evaluation Process Flow .............................................................................. 6
+7. Certificates and Awards................................................................................ 6
+8. Timeline.......................................................................................................... 6
+10. Intellectual Property Rights.......................................................................... 7
+11. Registration form: Will be shared soon!! .................................................. 7
+12. Proforma for Submitting Technical Proposal .................................................. 7
+C-DAC SUVIDHA Challenge
+1. Hackathon Title
+Smart Urban Virtual Interactive Digital Helpdesk Assistant (SUVIDHA) - 2026
+2. Introduction
+Centre for Development of Advanced Computing (C-DAC) is the premier R&D
+organization of the Ministry of Electronics and Information Technology (MeitY) for
+carrying out R&D in IT, Electronics and associated areas. C-DAC represents a
+unique facet working in close conjunction with MeitY to realize the nation's policy
+and pragmatic interventions in Information Technology.
+CDAC Centres at Bengaluru, Hyderabad, CINE, Delhi along with IIT-BBH is
+working on a project titled “Smart City 2.0: Empowering Indian Industries with Smart
+Solutions” in which Indian industry is being encouraged for developing indigenous
+solutions for Indian cities. These solutions will enhance the functionality of utilities
+in urban cities and these will help smart city mission. Ministry of Electronics and
+Information Technology, Government of India (MietY) is supporting this project.
+As part of this project, C-DAC proudly announces “Smart Urban Virtual
+Interactive Digital Helpdesk Assistant (SUVIDHA) 2026”, a platform where
+creativity meets purpose to drive transformative solutions for India’s future!
+C-DAC, along with multiple collaborating centers and state departments, is actively
+working to modernize civic service delivery across India. To enhance the efficiency,
+transparency, and accessibility of public service delivery in Electricity, Gas, Water,
+Sanitation, Municipal Services, C-DAC is developing citizen-facing interactive
+kiosks to deploy across civic utility offices.
+A national-level hackathon inviting students to design next-generation Kiosk User
+Interfaces & Workflows for real-time citizen interaction in public utility offices.
+Participants will work on building unified, user-friendly, multilingual kiosk systems
+for government departments to streamline service delivery and improve citizen
+experience.
+3. Problem Statement:
+Design and Development of a touch interface of KIOSK for Customer Interaction in
+Civic Utility Offices. This problem statement reflects the real-world challenges of
+modern urban governance and provides participants an opportunity to develop
+innovative, impactful solutions that enhance citizen engagement and streamline civic
+service delivery in smart cities.
+The goal is to build a single, integrated, self-service kiosk interface capable of
+delivering services for:
+• Electricity Utility Offices
+• Gas Distribution Offices
+• Municipal Corporations (Water, Waste Management)
+The kiosk must support multilingual UI, secure citizen authentication, bill payments,
+service requests, complaints, document uploads, status tracking, and receipt
+generation.
+C-DAC SUVIDHA Challenge
+3.1Background:
+As Indian cities continue to expand, the demand for reliable, transparent, and efficient
+civic services—spanning Electricity, Gas, Water, Sanitation, and Municipal
+Grievances—has increased significantly. Traditional service counters in civic utility
+offices often struggle to handle high user volumes, resulting in long queues, manual
+paperwork, inconsistent service quality, delays in processing requests, and limited
+grievance visibility. These challenges directly impact citizen satisfaction and place a
+heavy administrative burden on utility departments.
+To address these gaps, modern civic utility systems are shifting toward digitized,
+citizen-centric service delivery models. A unified Interactive Self-Service KIOSK
+Interface offers a transformative approach by enabling citizens to independently
+perform essential tasks
+3.2 Scope
+• KIOSK Interface & Functionality:
+▪ Develop a touch-based interactive interface for customer engagement.
+▪ Support common tasks such as bill payments, new connection requests,
+grievance submission, and information retrieval.
+• User Experience & Accessibility:
+▪ Responsive UI design for easy navigation.
+▪ Multi-language support, accessibility options, and clear visual cues for
+diverse customer groups.
+• Security & Access Management:
+▪ Secure user authentication and session management.
+▪ Ensure data confidentiality through encrypted communication and
+adherence to compliance standards.
+3.3Objectives
+• Interactive User-Interface: Offer a user-friendly interface with step-by-step
+instructions, multilingual support, and visual prompts for ease of use.
+• Self-Service Functionality: Enable customers to perform routine activities such
+as bill payment, connection status check, and complaint registration without staff
+assistance.
+• Real-Time Information: Provide instant access to account details, consumption
+data, payment history, and service notifications.
+• Secure Transactions: Implement secure authentication, payment processing,
+and encryption to safeguard customer data.
+• Reporting and Analytics: Capture customer interactions and generate reports
+to help management optimize service operations.
+3.4 Key Features
+• Unified Service Interface: Centralized access to all civic services through an
+easy-to-navigate interface.
+C-DAC SUVIDHA Challenge
+• Real-Time Status & Notifications: Live updates on service requests,
+payments, outages, advisories, and emergencies.
+• Self-Service Citizen Operations: Support bill payments, new connections,
+meter readings submission, and complaints registration.
+• Document Access: Citizens can download or print receipts, certificates, and
+service summaries.
+• Admin Controls: Backend access for office staff to monitor KIOSK usage,
+generate reports, and manage content.
+3.5 Technical Requirements
+• Front-end: React.js or Angular with responsive design frameworks.
+• Backend: Node.js / Python / Go / Java for developing individual services.
+• Architecture Style: Independent, loosely coupled microservices
+communicating via REST or gRPC.
+• Security: OAuth2 / JWT for authentication, TLS for secure service-to-service
+communication.
+• Payment Gateway: Secure integration for online transactions.
+• Database: MySQL / PostgreSQL for storing interaction logs and user data.
+Note: Participants must ensure that their solution adheres to all relevant
+Government of India norms, policies, and regulatory frameworks, including— but not
+limited to— the Digital Personal Data Protection (DPDP) Act, IT Act guidelines,
+cybersecurity directives, accessibility standards, and municipal governance rules
+applicable to Smart Cities.
+3.6 Expected Deliverables
+• Fully functional Interface of Unified Civic Services KIOSK with multi-service
+integration.
+• Secure authentication, payment gateway integration, and document printing
+support.
+• Admin dashboard for monitoring kiosk activity and managing services.
+• Technical documentation including system design, API details, deployment
+steps, and user manual.
+3.7 Use Case Examples
+• Smart City Municipal Center: Citizens access all civic services at one point.
+• Public Places: Deployed at bus stations, metro stations, and community
+centers for quick service access.
+• Urban Local Body Offices (ULBs): Reduces workload at counters and speeds
+up citizen service turnaround.
+C-DAC SUVIDHA Challenge
+• Emergency Information Display: Citizens receive real-time updates on
+outages, weather alerts, construction notices, etc.
+4. Judging Criteria
+Criterion Description Weightage
+Functionality Real-time data streaming, control
+capabilities, and automation features
+40%
+Usability & Design User interface aesthetics, customization
+options, and responsiveness
+20%
+Innovation Novel features, scalability, and overall
+technical approach
+15%
+Security &
+Robustness
+Implementation of secure authentication,
+error handling, and data protection
+15%
+Documentation &
+Deployment
+Quality of documentation, clarity of API,
+and ease of deployment
+10%
+5. Guidelines for Submission
+• Team Composition: Student teams must consist of 3 to 4 members, including a
+mentor*.
+• Institutional Requirement: All team members must belong to the same institution.
+• Eligibility: Participants must provide valid proof of their institution's approval or
+recognition by AICTE or UGC.
+• Application Process: Applications must be submitted exclusively through the
+Google Forms provided on the official social media link. Submissions via any
+other method will not be considered.
+• Application Format: Submissions must strictly follow the format available on the
+hackathon website or social media link. Applications in any other format will be
+rejected.
+• Selection Process: The initial screening and finalist selection will be conducted
+online. Shortlisted teams must be available online for the presentation/demo
+stage.
+• Rules & Modifications: The Hackathon Organising Committee reserves the right
+to modify the event's rules, format, or prizes at any time. Any changes will be
+communicated to participants in a clear and timely manner.
+• Participation Certificate: Teams that successfully pass the initial screening will
+receive a certificate of participation.
+*Mentor is not compulsory; however, a designated contact person from C-DAC
+will be assigned to each team.
+C-DAC SUVIDHA Challenge
+6. Evaluation Process Flow
+7. Certificates and Awards
+Prize Denomination
+Winner 3,00,000
+First Runner-up 2,00,000
+Second Runner-up 1,00,000
+8. Timeline
+Event Date Mode
+Application Submission Start
+Date
+6 January 2026 Online
+Application Submission
+Deadline
+10 February 2026 Online
+C-DAC SUVIDHA Challenge
+Announcement of Teams
+Qualified for the 2
+nd
+-Level
+Evaluation
+20 February 2026 Online
+Presentation of the Qualified
+Teams
+2 March 2026 Online
+Finalists Announcement 5 March 2026 Online
+Grand Finale
+(Presentation/Demo)
+25 March 2026 Offline
+Award Ceremony TBD Offline
+10. Intellectual Property Rights
+Any Intellectual Property (IP) arising from projects submitted at this hackathon will be
+the sole property of C-DAC. By participating in the hackathon, all participants agree
+that any inventions, designs, code, patents, or other forms of IP created during the
+event or submitted at this event will be transferred to and owned by C-DAC.
+11. Registration form: https://forms.gle/eHqRazyLEVMaH2Mr8
+12. Proforma for Submitting Technical Proposal: Click
+13. Need Support?
+Email us: smartcities.challenges@cdac.in
