@@ -1,4 +1,5 @@
 # **Saarthi**
+**By Aadi Joshi and Kavya Bhand**
 
 ## Smart Urban Virtual Interactive Digital Helpdesk Assistant
 
